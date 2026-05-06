@@ -10,7 +10,9 @@
 /* Header Styling */
 header {
     display: grid;
+    /* left side 24px, middle auto, right side 44px for hamburger button (typical 44px) */
     grid-template-columns: 24px auto 44px;
+    /* padding all the way around (clockwise from top): 5px, 0, 5px, 10px */
     padding: 5px 0 5px 10px;
     align-items: end;   
     border-bottom: solid 1px #ddd;
@@ -21,6 +23,7 @@ header img {
     display: block;
     width: 100%;
     height: auto;
+    padding: 2px;
 }
 
 header span {
@@ -35,9 +38,14 @@ header span {
     border: none;
     color: #3D405B;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hamburger::after {
     content: "\2630";
     font-size: 2rem;
+}
+
+.hamburger.show::after {
+    content: "\00D7";
 }
