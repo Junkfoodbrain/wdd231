@@ -1,0 +1,85 @@
+/* ------color scheme-----
+blue: #505fce
+tan: #a3735c */
+
+
+*{
+    font-family: "josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+/* -----header------ */
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 2px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #505fce;
+}
+
+/* -----Hamburger ---- */
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #505fce;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+} 
+.hamburger.show::before {
+    content:"\00D7";
+}
+
+/* ------navigation------ */
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #505fce;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+.navigation a:hover {
+    background-color: #a3735c;
+    color: white;
+}
+
+h1 {
+    margin-left: 10px;
+}
