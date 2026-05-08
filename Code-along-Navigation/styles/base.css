@@ -1,6 +1,4 @@
-
-
-*{
+* {
     font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
 }
@@ -14,9 +12,9 @@ header {
     grid-template-columns: 24px auto 44px;
     /* padding all the way around (clockwise from top): 5px, 0, 5px, 10px */
     padding: 5px 0 5px 10px;
-    align-items: end;   
+    align-items: end;
     border-bottom: solid 1px #ddd;
-    column-gap: 8px;    
+    column-gap: 8px;
 }
 
 header img {
@@ -28,7 +26,7 @@ header img {
 
 header span {
     font-size: 1.2rem;
-    color: #3D405B;    
+    color: #3D405B;
 }
 
 
@@ -56,7 +54,6 @@ header span {
 
 }
 
-.navigation.show{
+.navigation.show {
     display: block
-
 }
