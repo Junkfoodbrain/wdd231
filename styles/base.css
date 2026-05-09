@@ -116,6 +116,13 @@ section img {
     display: inline-block;
     justify-content: center;
     column-gap: 8px;
+    background-color: #3d499c;
+    color: whitesmoke;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #533a2f;    
 }
 
 /* 
