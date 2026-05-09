@@ -1,10 +1,11 @@
 /* ------color scheme-----
-blue: #505fce
-tan: #a3735c */
+blue: #3d499c
+tan: #533a2f */
 
 
 *{
-    font-family: "josefin Sans", sans-serif;
+    --heading-font: 'Simonetta', serif; 
+    --body-font: 'Roboto', Sans-serif;
     box-sizing: border-box;
 }
 
@@ -28,7 +29,7 @@ header img {
 
 header span {
     font-size: 1.2rem;
-    color: #505fce;
+    color: #3d499c;
 }
 
 /* -----Hamburger ---- */
@@ -36,11 +37,11 @@ header span {
 .hamburger {
     background: none;
     border: none;
-    color: #505fce;
+    color: #3d499c;
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+    
 .hamburger::before {
     content: "\2630";
     font-size: 2rem;
@@ -67,7 +68,7 @@ header span {
 .navigation a {
     display: block;
     padding: .8rem 10px;
-    color: #505fce;
+    color: #3d499c;
     text-decoration: none;
     border-bottom: solid 1px #ddd;
 }
@@ -76,13 +77,36 @@ header span {
     background-color: #eee;
 }
 .navigation a:hover {
-    background-color: #a3735c;
+    background-color: #533a2f;
     color: white;
 }
 
-h1 {
+h1{
     margin-left: 10px;
-    color: #505fce
+    color: #3d499c;
+}
+
+h2 {
+    color: whitesmoke;
+    background-color: #533a2f;
+    text-align: center;
+}
+
+section img {
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    border-color: #3d499c;    
+    border-width: 8px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+
+.courses button {    
+    display: inline-block;
+    justify-content: center;
+    column-gap: 8px;
 }
 /* 
 ------------Footer----------- */

@@ -10,12 +10,14 @@
     <!-- font here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Simonetta&family=Zain&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Simonetta&family=Roboto&display=swap" rel="stylesheet">
 
     <!-- style sheets here -->
      <link rel="stylesheet" href="styles/normalize.css">
      <link rel="stylesheet" href="styles/base.css">
      <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
 
 </head>
 <header>
@@ -33,15 +35,26 @@
     </nav>
     <main>
         <h1>Home</h1>
+
         <section>
             <h2>About Me</h2>
+            <p> I live in beautiful California, USA with my husband and dog, Loki. All of our children 
+                are grown up and have officially launched into the world. I am a night owl and work in the construction
+                industry but gaining a degree from BYU Idaho in Professional Studies with an emphasis 
+                in Web Design and Development. 
+            </p>
         </section>
         <section>
             <h2>Student Photo</h2>
-        </section>
-        <section>
+            <img src="images/leah-sorensen.jpg" alt="student photo" width="200" height="200">
+        </section>          
+        <section class="courses">
             <h2>Web Certificate Courses</h2>
-        </section>
+                <button>All</button>
+                <button>CSE</button>
+                <button>WDD</button>              
+        </section>        
+        
     </main>
     <footer>
         <div class="social">
@@ -50,10 +63,10 @@
             <a href="https://www.linkedin.com/in/leah-sorensen" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
             <a href="https://x.com/" target="_blank"><img src="images/twitter-x.svg" alt="X" width="16" height="16"></a>
         </div>
-        <p>&copy; <span id="currentyear"></span></p>
+        <p>&copy; <span id="currentyear"></span> Leah Sorensen, California, USA</p>
         <p>Last modified: <span id="lastmodified"></span></p> 
     </footer>   
-    <script src="scripts/navigation.js"></script>
+    
     
 </body>
 </html>
