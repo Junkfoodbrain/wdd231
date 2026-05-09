@@ -82,4 +82,40 @@ header span {
 
 h1 {
     margin-left: 10px;
+    color: #505fce
+}
+/* 
+------------Footer----------- */
+
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+/* this relates to the whole div in class "social" in the footer */
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+/* each specific <a> tag css */
+.social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc solid 1px;   
+    border-radius: 10px; 
+}
+/* here is the css where we specify the size of the actual icons
+but not the container */
+.social img {
+    width: 22px;
+    height: 22px;
+}
+.social a:hover {
+    background-color: #ddd;
+
 }

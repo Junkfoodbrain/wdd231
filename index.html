@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Leah Sorensen</title>
+    <meta name="description" content="WDD 231 - My Home Page">
+    <meta name="author" content="Leah Sorensen">
 
     <!-- font here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Simonetta&family=Zain&display=swap" rel="stylesheet">
 
     <!-- style sheets here -->
      <link rel="stylesheet" href="styles/normalize.css">
@@ -15,7 +20,7 @@
 </head>
 <header>
     <img src="images/briefcase-fill.svg" alt="site logo" width="16" height="16">
-    <span>Site Name</span>
+    <span>Leah Sorensen</span>
     <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
 </header>
 <body>
@@ -39,9 +44,14 @@
         </section>
     </main>
     <footer>
-        <span id="currentyear"></span> &copy;
-        <p>Leah Sorensen, California USA</p> 
-        <p></p>
+        <div class="social">
+            <a href="https://www.facebook.com/leah.sorensen.18" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
+            <a href="https://github.com/Junkfoodbrain" target="_blank"><img src="images/Github.svg" alt="Github" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/leah-sorensen" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/twitter-x.svg" alt="X" width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span></p>
+        <p>Last modified: <span id="lastmodified"></span></p> 
     </footer>   
     <script src="scripts/navigation.js"></script>
     
