@@ -15,6 +15,11 @@ navbutton.addEventListener('click', () => {
     navlinks.classList.toggle('show');
 })
 
+
+// ----cards---
+// wdd130
+const wdd130Link = document.querySelector('#wdd130');
+
 // -----course list array-----
 const courses = [
     {
