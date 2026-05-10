@@ -111,18 +111,23 @@ section img {
     box-shadow: 0 8px 20px rgba(61, 73, 156, 0.28);
 }
 
+.courses {
+    text-align: center;
+}
 
 .courses button {
     display: inline-block;
-    justify-content: center;
-    column-gap: 8px;
+    margin: 10px;
     background-color: #3d499c;
     color: whitesmoke;
     border-radius: 4px;
+    font-size: 2rem;
 }
 
+
+
 button:hover {
-    background-color: #533a2f;    
+    background-color: #533a2f;
 }
 
 /* 
