@@ -103,6 +103,7 @@ h2 {
 
 section p {
     font-family: var(--body-font);
+    font-size: 1.3rem;
 }
 
 section img {
