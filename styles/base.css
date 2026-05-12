@@ -111,6 +111,10 @@ section img {
     box-shadow: 0 8px 20px rgba(61, 73, 156, 0.28);
 }
 
+.student {
+    display: block;
+}
+
 .courses {
     text-align: center;
 }
