@@ -97,6 +97,8 @@ h2 {
     color: whitesmoke;
     background-color: #533a2f;
     text-align: center;
+    
+    
 }
 
 section p {
@@ -115,7 +117,7 @@ section img {
     display: block;
 }
 
-.courses {
+.courses {    
     text-align: center;
 }
 
@@ -136,9 +138,10 @@ button:hover {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 0.5rem;
     margin-top: 0.5rem;
+    
 }
 
 .card {
