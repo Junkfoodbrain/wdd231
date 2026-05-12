@@ -129,10 +129,39 @@ section img {
 }
 
 
-
 button:hover {
     background-color: #533a2f;
     cursor: pointer;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.card {
+    border: 1px solid #3d499c;
+    border-radius: 4px;
+    padding: 0.35rem 0.5rem;
+    background-color: #f2f4ff;
+    color: #1f2558;
+    font-family: var(--body-font);
+}
+
+.card.completed {
+    background-color: #3d499c;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.credit-total {
+    grid-column: 1/ -1;
+    text-align: center;
+    margin-top: 0.25rem;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
 }
 
 /* 

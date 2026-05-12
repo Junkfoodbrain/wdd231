@@ -18,38 +18,47 @@ navbutton.addEventListener('click', () => {
 
 // ----Course Cards---
 
+function createCourseCard(courseList) {
+    const cardsContainer = document.querySelector('.cards');
+    cardsContainer.innerHTML = '';
+
+    courseList.forEach(course => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        if (course.completed) {
+            card.classList.add('completed');
+        }
+        card.textContent = `${course.subject} ${course.number}`;
+        cardsContainer.appendChild(card);
+    });
+
+    const totalCredits = courseList.reduce((sum, course) => sum + course.credits, 0);
+    const creditLine = document.createElement('p');
+    creditLine.classList.add('credit-total');
+    creditLine.textContent = `The total credits for courses listed above is:  ${totalCredits}`;
+    cardsContainer.appendChild(creditLine);
+}
+
 // -----all-----
 const allLink = document.querySelector('#all');
 allLink.addEventListener('click', () => {
-    filteredcourses = courses.filter(course => course.subject === 'all');
-})
+    createCourseCard(courses);
+});
 
 // -----cse-----
 const cseLink = document.querySelector('#cse');
 cseLink.addEventListener('click', () => {
-    filteredCourses = courses.filter(course => course.subject === 'CSE');
-})
+    const filteredCourses = courses.filter(course => course.subject === 'CSE');
+    createCourseCard(filteredCourses);
+});
 
-// wdd
+// -----wdd-----
 const wddLink = document.querySelector('#wdd');
 wddLink.addEventListener('click', () => {
-    filteredCourses = courses.filter(course => course.subject === 'WDD');
-})
-
-
-
-let card = document.createElement("section");
-let subject = document.createElement("h3");
-let number = document.createElement("p");
-let title = document.createElement("p");
-let credits = document.createElement("p");
-let certificate = document.createElement("p");
-let description = document.createElement("p");
-let technology = document.createElement("p");
-
-
-
-
+    const filteredCourses = courses.filter(course => course.subject === 'WDD');
+    createCourseCard(filteredCourses);
+});
 
 
 
