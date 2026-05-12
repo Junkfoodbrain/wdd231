@@ -80,7 +80,7 @@ header span {
 
 .navigation a:hover {
     background-color: #533a2f;
-    color: white;
+    color: whitesmoke;
 }
 
 h1,
@@ -149,14 +149,14 @@ button:hover {
     border: 1px solid #3d499c;
     border-radius: 4px;
     padding: 0.35rem 0.5rem;
-    background-color: #f2f4ff;
+    background-color: whitesmoke;
     color: #1f2558;
     font-family: var(--body-font);
 }
 
 .card.completed {
     background-color: #3d499c;
-    color: #ffffff;
+    color: whitesmoke;
     font-weight: 600;
 }
 
