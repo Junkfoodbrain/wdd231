@@ -131,7 +131,7 @@ section img {
 }
 
 
-button:hover {
+.courses button:hover {
     background-color: #533a2f;
     cursor: pointer;
 }
