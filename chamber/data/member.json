@@ -1,0 +1,10 @@
+// create array of at least seven (7) companies where each entry
+// contains the following fields:
+
+Company Name
+Company Addresses
+Company Phone Number
+Company Website URL
+Image file name with extension (different image for each company)
+membership level(1=member,2=silver, 3=gold)
+other information you deem appropriate
