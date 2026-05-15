@@ -1,0 +1,31 @@
+* {
+    --primary-color: #BAB0AB;
+    --secondary-color: #4C3847;
+    font-family:  'Roboto', sans-serif, 'Dancing Script', 'Simonetta';
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+header {
+    background-color: #4C3847;
+    color: Whitesmoke;
+    display: block;
+    padding: 1rem;
+    border-bottom: 1rem solid #3B7087;
+    text-align: center;
+    font-size: 3rem;
+}
+
+h1 {
+    background-color: #BAB0AB;
+    color: black;
+    font-family: 'Simonetta', serif;
+}
+
+h2 {
+    color: whitesmoke;
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+}
