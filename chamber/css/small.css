@@ -19,6 +19,7 @@ header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    padding: 1rem 1.25rem;
 }
 
 header span {
