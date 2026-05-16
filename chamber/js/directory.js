@@ -1,3 +1,21 @@
+
+
+
+// ---hamburger button and navigation-----
+const hamButton = document.querySelector("#ham-btn");
+const navigation = document.querySelector("#site-nav");
+
+function toggleNav() {
+    navigation.classList.toggle("show");
+}
+
+hamButton.addEventListener("click", toggleNav);
+
+
+
+
+
+// ----reading JSON data and displaying on cards ---
 const url = "data/member.json";
 
 const membersContainer = document.querySelector("#members");
@@ -66,3 +84,7 @@ listButton.addEventListener("click", () => {
 
 getMembers();
     
+// --footer content ---
+const today = new Date();
+today.getFullYear();
+document.getElementById("lastmodified").innerHTML = document.lastModified;
