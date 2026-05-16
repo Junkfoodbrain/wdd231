@@ -127,6 +127,8 @@ article img {
     display: block;
     max-width: 320px;
     width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
     height: auto;
     border-radius: 0.35rem;   
 }
@@ -163,6 +165,7 @@ article a {
 footer {
     margin-top: 1rem;
     padding: 1rem;
+
     background-color: var(--secondary-color);
     color: var(--text-light);
     text-align: center;

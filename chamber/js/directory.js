@@ -27,7 +27,7 @@ async function getMembers() {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
+        
         displayMembers(data.members);
     } catch (error) {
         membersContainer.innerHTML = "<p>Member data could not be loaded.</p>";
@@ -39,7 +39,7 @@ async function getMembers() {
 function displayMembers(members) {
     membersContainer.innerHTML = "";
 
-    members.forEach((member) => {
+    members.forEach((member, index) => {
         const card = document.createElement("article");
 
         const logo = document.createElement("img");
