@@ -1,6 +1,6 @@
 const url = "data/member.json";
 
-const membersContain = document.querySelector("#members");
+const membersContainer = document.querySelector("#members");
 const gridButton = document.querySelector("#grid");
 const listButton = document.querySelector("#list");
 
@@ -42,7 +42,7 @@ function displayMembers(members) {
 
         const website = document.createElement("a");
         website.href = member.website;
-        website.targe = "_blank";
+        website.target = "_blank";
         website.rel = "noopener";
         website.textContent = "visit Website";
 
@@ -57,6 +57,11 @@ function displayMembers(members) {
 gridButton.addEventListener("click", () => {
     membersContainer.classList.add("list");
     membersContainer.classList.remove("grid");
+});
+
+listButton.addEventListener("click", () => {
+    membersContainer.classList.add("grid");
+    membersContainer.classList.remove("list");
 });
 
 getMembers();
