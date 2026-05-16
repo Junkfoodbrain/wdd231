@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #BAB0AB;
+    --secondary-color: #4C3847;
+    --accent-color: #3B7087;
+    --card-bg: whitesmoke;
+    --text-light: whitesmoke;
+    --text-dark: black;
+    font-family: "Roboto", sans-serif, "Dancing Script", "Simonetta";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+header {
+    background-color: var(--secondary-color);
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+header span {
+    font-family: "Simonetta", serif;
+    font-size: 1.2rem;
+}
+
+.hamburger {
+    background: transparent;
+    border: 1px solid whitesmoke;
+    border-radius: 0.35rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.35rem;    
+}
+
+.navigation {
+    display: none;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--accent-color);    
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--primary-color);    
+}
