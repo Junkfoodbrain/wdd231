@@ -45,7 +45,13 @@ function displayMembers(members) {
         const logo = document.createElement("img");
         logo.src = member.image;
         logo.alt = `${member.name} logo`;
-        logo.loading = "lazy";
+        if (index === 0) {
+            logo.loading = "eager";
+            logo.fetchPriority = "high";
+        }
+        else {
+            logo.loading = "lazy";
+        }        
         logo.width = 300;
         logo.height = 200;
 
