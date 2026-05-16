@@ -73,13 +73,13 @@ function displayMembers(members) {
 }
 
 gridButton.addEventListener("click", () => {
-    membersContainer.classList.add("list");
-    membersContainer.classList.remove("grid");
+    membersContainer.classList.add("grid");
+    membersContainer.classList.remove("list");
 });
 
 listButton.addEventListener("click", () => {
-    membersContainer.classList.add("grid");
-    membersContainer.classList.remove("list");
+    membersContainer.classList.add("list");
+    membersContainer.classList.remove("grid");
 });
 
 getMembers();
@@ -88,4 +88,5 @@ getMembers();
 const today = new Date();
 today.getFullYear();
 document.getElementById("lastModified").innerHTML = document.lastModified;
+document.getElementById("currentyear").textContent = today.getFullYear();
 

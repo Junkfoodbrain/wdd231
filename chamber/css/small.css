@@ -75,13 +75,13 @@ body {
 }
 
 main {
-    max-width: 1100pz;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 1rem;
 }
 
 h1 {
-    font-family: "simonetta", serif;
+    font-family: "Simonetta", serif;
     color: var(--secondary-color);
     margin-top: 0.4rem;
 }
@@ -161,7 +161,7 @@ article a {
 /* ----footer ----- */
 
 footer {
-    margin-top: 1.rem;
+    margin-top: 1rem;
     padding: 1rem;
     background-color: var(--secondary-color);
     color: var(--text-light);
