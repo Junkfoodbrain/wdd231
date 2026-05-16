@@ -1,12 +1,62 @@
-// create array of at least seven (7) companies where each entry
-// contains the following fields:
 
-Company Name
-Company Addresses
-Company Phone Number
-Company Website URL
-Image file name with extension (different image for each company)
-membership level(1=member,
-2=silver,
-3=gold)
-other information you deem appropriate
+
+{
+    "members": [
+        {
+            "name": "Roseville Meat Company",
+            "address": "700 Atlantic St, Roseville, CA 95678",
+            "phone": "(916) 742-6232",
+            "website": "https://rosevillemeats.com",
+            "image": "images/member1.webp",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Jucebox Local Marketing Partners",
+            "address": "625 Ringneck Ct, Roseville, CA 95747",
+            "phone": "(916) 415-8625",
+            "website": "https://www.juceboxlocalmarketingpartners.com",
+            "image": "images/member2.webp",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Safeway",
+            "address": "9045 Woodcreek Oaks Blvd, Roseville CA 95747",
+            "phone": "916) 780-9919",
+            "website": "https://local.safeway.com",
+            "image": "images/member3.webp",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Green Acres Nursery & Supply",
+            "address": "5436 Crossings Dr, Rocklin, CA 95677",
+            "phone": "(916) 824-1310",
+            "website": "https://www.idiggreenacres.com",
+            "image": "images/member4.webp",
+            "membershipLevel": 3
+        },
+        {
+            "name": "The Happy Hive Roseville",
+            "address":"113 Kenmare Ct. Roseville, CA 95747",
+            "phone": "(916) 765-2304",
+            "website": "https://www.intuitiveadventures.org/happy-hive-roseville",
+            "image": "images/member5.webp",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Pizza Guys",
+            "address": "745a Foothills Blvd, Roseville, CA 95747",
+            "phone": "(916) 773-5555",
+            "website": "https://113.pizzaguys.com",
+            "image": "images/member6.webp",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Nick The Greek",
+            "address": "711 Pleasant Grove Blve, Roseville, CA 95678",
+            "phone": "(916) 474-4336",
+            "website": "http://www.nickthegreek.com",
+            "image": "images/member7.webp",
+            "membershipLevel": 2
+        }              
+    ]
+}
