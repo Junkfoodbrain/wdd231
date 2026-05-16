@@ -87,5 +87,5 @@ getMembers();
 // --footer content ---
 const today = new Date();
 today.getFullYear();
-document.getElementById("lastmodified").innerHTML = document.lastModified;
+document.getElementById("lastModified").innerHTML = document.lastModified;
 
