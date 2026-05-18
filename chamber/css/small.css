@@ -40,13 +40,13 @@ header span {
 
 .hamburger::before {
     content: "\2630";
-    font-size: 1.35rem;    
+    font-size: 1.35rem;
 }
 
 .navigation {
     display: none;
     background-color: var(--card-bg);
-    border-bottom: 1px solid whitesmoke;    
+    border-bottom: 1px solid whitesmoke;
 }
 
 .navigation.show {
@@ -74,7 +74,7 @@ header span {
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
-    background-color: var(--primary-color);    
+    background-color: var(--primary-color);
 }
 
 main {
@@ -133,7 +133,7 @@ article img {
     aspect-ratio: 4/3;
     object-fit: contain;
     height: auto;
-    border-radius: 0.35rem;   
+    border-radius: 0.35rem;
 }
 
 article h2 {

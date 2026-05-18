@@ -27,7 +27,7 @@ async function getMembers() {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        
+
         displayMembers(data.members);
     } catch (error) {
         membersContainer.innerHTML = "<p>Member data could not be loaded.</p>";
@@ -51,7 +51,7 @@ function displayMembers(members) {
         }
         else {
             logo.loading = "lazy";
-        }        
+        }
         logo.width = 300;
         logo.height = 200;
 
@@ -89,7 +89,7 @@ listButton.addEventListener("click", () => {
 });
 
 getMembers();
-    
+
 // --footer content ---
 const today = new Date();
 today.getFullYear();
