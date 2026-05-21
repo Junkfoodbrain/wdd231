@@ -71,6 +71,11 @@ header span {
     background-color: whitesmoke;
 }
 
+.navigation a[aria-current="page"] {
+    background-color: var(--accent-color);
+    color: whitesmoke;
+}
+
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;

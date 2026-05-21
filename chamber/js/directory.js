@@ -6,11 +6,13 @@ const hamButton = document.querySelector("#ham-btn");
 const navigation = document.querySelector("#site-nav");
 
 function toggleNav() {
-    navigation.classList.toggle("show");
+    const isOpen = navigation.classList.toggle("show");
+    hamButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
 }
 
-hamButton.addEventListener("click", toggleNav);
-
+if (hamButton && navigation) {
+    hamButton.addEventListener("click", toggleNav);
+}
 
 
 
@@ -78,17 +80,19 @@ function displayMembers(members) {
     });
 }
 
-gridButton.addEventListener("click", () => {
-    membersContainer.classList.add("grid");
-    membersContainer.classList.remove("list");
-});
+if (membersContainer && gridButton && listButton) {
+    gridButton.addEventListener("click", () => {
+        membersContainer.classList.add("grid");
+        membersContainer.classList.remove("list");
+    });
 
-listButton.addEventListener("click", () => {
-    membersContainer.classList.add("list");
-    membersContainer.classList.remove("grid");
-});
+    listButton.addEventListener("click", () => {
+        membersContainer.classList.add("list");
+        membersContainer.classList.remove("grid");
+    });
 
-getMembers();
+    getMembers();
+}
 
 // --footer content ---
 const today = new Date();
