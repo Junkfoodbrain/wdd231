@@ -16,7 +16,7 @@ hamButton.addEventListener("click", toggleNav);
 
 
 // ----reading JSON data and displaying on cards ---
-const url = "data/member.json";
+const url = "data/members.json";
 
 const membersContainer = document.querySelector("#members");
 const gridButton = document.querySelector("#grid");
