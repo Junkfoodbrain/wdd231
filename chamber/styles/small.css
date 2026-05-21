@@ -133,6 +133,10 @@ h1 {
     box-shadow: 0 4px 12px rgba(9, 0, 0, 0.8);
 }
 
+#members {
+    min-height: 75vh;
+}
+
 article img {
     display: block;
     max-width: 320px;
