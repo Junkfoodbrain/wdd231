@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 700px)">
 
     <link rel="icon" href="images/rose_favicon.ico" type="image/x-icon">
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/chamber.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         <button id="ham-btn" class="hamburger" aria-label="Open navigation menu" aria-expanded="false"
             aria-controls="site-nav"></button>
     </header>
-    <nav id="site-nav" class="navigation">
+    <nav id="site-nav" class="navigation" aria-label="Primary">
         <ul>
             <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
@@ -36,7 +36,24 @@
         </ul>
     </nav>
     <main>
+        <img src="images/roseville_hero1.jpg" class="hero" alt="Beautiful picture of a Roseville park at sunset">
         <h1>Home Page</h1>
+        <div>
+            <h2>Events</h2>
+                <p>Food Truck Cinema</p>
+                <p>Downtown Farmer's Market</p>
+            <h2>News</h2>
+                <p>New Costco Opening</p>
+                <p>Town Hall Meeting Scheduled</p>
+                <p>New chamber members welcomed</p>
+            <h2>Local Weather</h2>
+                <div class="card">
+                    <h2 id="town">Roseville</h2>
+                    <img id="graphic" src="" alt="">
+                    <p id="description"></p>
+                    <p id="temperature"></p>
+                </div>
+        </div>
     </main>
 
 
@@ -46,7 +63,7 @@
             <a href="https://www.linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
             <a href="https://www.github.com" aria-label="Github"><img src="images/github.svg" alt="Github"></a>
         </nav>
-        <p>&copy; <span id="currentyear"></span> Roseville Chamber of Commerce</p>
+        <p>&copy; <span id="currentyear"></span>Roseville Chamber of Commerce</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
