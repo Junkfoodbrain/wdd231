@@ -159,6 +159,39 @@ main {
     height: 72px;
 }
 
+.forecast {
+    margin-top: 1rem;
+}
+
+.forecast h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-family: "Simonetta", serif;
+    color: var(--secondary-color);    
+}
+
+#forecast-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.forecast-day {
+    background: var(--card-bg);
+    border: 1px solid #d6cfd2;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.forecast-day img {
+    width: 44px;
+    height: 44px;
+}
+
 .spotlight {
     min-height: 180px;
 }

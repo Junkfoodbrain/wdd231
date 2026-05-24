@@ -37,6 +37,10 @@
         align-items: stretch;
     }
 
+    #forecast-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .spotlight {
         grid-column: 1 / -1;
     }

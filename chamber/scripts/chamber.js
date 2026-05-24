@@ -107,11 +107,14 @@ const myTown = document.querySelector(`#town`);
 const myDescription = document.querySelector(`#description`);
 const myTemperature = document.querySelector(`#temperature`);
 const myGraphic = document.querySelector(`#graphic`);
+const forecastList = document.querySelector("#forecast-list");
 
 // --required variable for the URL--
 const myKey = "368293c2d82d59daf7f513835f8a06e3";
 const myLat = "38.78364307474867";
 const myLong = "-121.33191357999155";
+
+
 
 // --construct a full path using template literals--
 const myUrl = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
@@ -142,6 +145,32 @@ function displayResults(data) {
     myGraphic.setAttribute(`alt`, data.weather[0].description)
 }
 
+function DisplayForecast(list) {
+    const days = [];
+    const seen = new Set();
+    for (const entry of list) {
+        const date = entry.dt_txt.split(" ")[0];
+        if (entry.dt_txt.includes("12:00:00") && !seen.has(date)) {
+            seen.add(date);
+            days.push(entry);
+        }
+        if (days.length === 3) break;
+    }
+    forecastList.innerHTML = "";
+    days.forEach(day => {
+        const li = document.createElement("li");
+        li.className = "forecast-day";
+        li.innerHTML = `
+        <span>${new Date(day.dt_txt).toLocaleDateString(undefined, { weekday: "long" })}</span>
+        <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}">
+        <span>${Math.round(day.main.temp)}&degF</span>
+        <span style="text-transform: capitalize">${day.weather[0].description}</span>
+        `;
+        forecastList.appendChild(li);
+
+    })
+}
 
 // --start the process--
 apiFetch();
+fetchForecast();
