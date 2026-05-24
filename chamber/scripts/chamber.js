@@ -145,7 +145,20 @@ function displayResults(data) {
     myGraphic.setAttribute(`alt`, data.weather[0].description)
 }
 
-function DisplayForecast(list) {
+async function fetchForecast() {
+    if (!forecastList) return;
+    try {
+        const response = await fetch(forecastURL);
+        if (!response.ok) throw new Error(await response.text());
+        const data = await response.json();
+        displayForecast(data.list);
+    } catch (error) {
+        forecastList.innerHTML = "<li>Forecast unavailable.<li/>";
+        console.error("Forecast fetch failed:", error);
+    }    
+}
+
+function displayForecast(list) {
     const days = [];
     const seen = new Set();
     for (const entry of list) {
@@ -164,11 +177,11 @@ function DisplayForecast(list) {
         <span>${new Date(day.dt_txt).toLocaleDateString(undefined, { weekday: "long" })}</span>
         <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="${day.weather[0].description}">
         <span>${Math.round(day.main.temp)}&degF</span>
-        <span style="text-transform: capitalize">${day.weather[0].description}</span>
+        <span style="text-transform:capitalize">${day.weather[0].description}</span>
         `;
         forecastList.appendChild(li);
 
-    })
+    });
 }
 
 // --start the process--
