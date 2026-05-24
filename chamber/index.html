@@ -36,23 +36,36 @@
         </ul>
     </nav>
     <main>
-        <img src="images/roseville_hero1.jpg" class="hero" alt="Beautiful picture of a Roseville park at sunset">
+        <div class="hero-wrap">
+            <img src="images/roseville_hero2.jpg" class="hero" alt="Beautiful picture of a Roseville park at sunset">
+            <a class="hero-cta" href="contact.html">Join the Chamber - Make a difference in your community!</a>
+        </div>
         <h1>Home Page</h1>
-        <div>
-            <h2>Events</h2>
-                <p>Food Truck Cinema</p>
-                <p>Downtown Farmer's Market</p>
-            <h2>News</h2>
-                <p>New Costco Opening</p>
-                <p>Town Hall Meeting Scheduled</p>
-                <p>New chamber members welcomed</p>
-            <h2>Local Weather</h2>
-                <div class="card">
-                    <h2 id="town">Roseville</h2>
-                    <img id="graphic" src="" alt="">
-                    <p id="description"></p>
-                    <p id="temperature"></p>
+        <div class="cards-main">
+            <section class="events">
+                <h2>Current Events</h2>
+                    <p>Food Truck Cinema</p>
+                    <p>Downtown Farmer's Market</p>
+            </section>
+            <section class="news">
+                <h2>News</h2>
+                    <p>New Costco Opening</p>
+                    <p>Town Hall Meeting Scheduled</p>
+                    <p>Chamber Member Spotlight</p>
+            </section>
+            <section class="weather">
+                <h2>Local Weather</h2>
+                    <div class="card">
+                        <h3 id="town">Roseville</h3>
+                        <img id="graphic" src="" alt="">
+                        <p id="description"></p>
+                        <p id="temperature"></p>
                 </div>
+            </section>
+            <section class="spotlight">
+                <h2>Member Spotlight</h2>
+                <p>Highlighting our outstanding chamber members.</p>
+            </section>
         </div>
     </main>
 
@@ -63,7 +76,7 @@
             <a href="https://www.linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
             <a href="https://www.github.com" aria-label="Github"><img src="images/github.svg" alt="Github"></a>
         </nav>
-        <p>&copy; <span id="currentyear"></span>Roseville Chamber of Commerce</p>
+        <p>&copy; <span id="currentyear"></span> Roseville Chamber of Commerce</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
