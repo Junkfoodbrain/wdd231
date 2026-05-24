@@ -18,7 +18,7 @@ if (hamButton && navigation) {
 
 
 // ----reading JSON data and displaying on cards ---
-const url = "data/members.json";
+const Url = "data/members.json";
 
 const membersContainer = document.querySelector("#members");
 const gridButton = document.querySelector("#grid");
@@ -27,7 +27,7 @@ const listButton = document.querySelector("#list");
 
 async function getMembers() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(Url);
         const data = await response.json();
 
         displayMembers(data.members);
@@ -116,8 +116,10 @@ const myLong = "-121.33191357999155";
 
 
 
+
 // --construct a full path using template literals--
 const myUrl = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
+const forecastUrl = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
 
 // --Try to grab the current weather data--
 async function apiFetch() {
@@ -145,10 +147,12 @@ function displayResults(data) {
     myGraphic.setAttribute(`alt`, data.weather[0].description)
 }
 
+// ---forecasting out 3 days ----
+
 async function fetchForecast() {
     if (!forecastList) return;
     try {
-        const response = await fetch(forecastURL);
+        const response = await fetch(forecastUrl);
         if (!response.ok) throw new Error(await response.text());
         const data = await response.json();
         displayForecast(data.list);
@@ -184,6 +188,6 @@ function displayForecast(list) {
     });
 }
 
-// --start the process--
+// --start the processes--
 apiFetch();
 fetchForecast();
