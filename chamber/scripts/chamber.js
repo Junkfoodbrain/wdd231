@@ -206,16 +206,25 @@ async function getMembers() {
 
 function filterGoldSilver(members) {
     return members.filter(member =>
-        member.membership === "Gold" || member.membership === "Silver"
+        member.membershipLevel === 2 || member.membershipLevel === 3
     );
 }
 function getRandomMembers(members, count = 2) {
     const shuffled = members.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 }
+
+function getMembershipText(level) {
+    if (level === 3) return "Gold";
+    if (level === 2) return "Silver";
+    return "Other";
+}
+
 function displaySpotlights(members) {
     const spotlightContainer = document.getElementById("spotlight-container");
     spotlightContainer.innerHTML = "";
+
+
 
     members.forEach(member => {
         const card = document.createElement("div");
@@ -235,19 +244,23 @@ function displaySpotlights(members) {
         info.textContent = member.address;
 
         const phone = document.createElement("p");
-        info.textContent = member.phone;
+        phone.textContent = member.phone;
 
-        const website = document.createelement("a");
+        const website = document.createElement("a");
         website.href = member.website;
         website.textContent = "Visit Website";
-        wesite.target = "_blank";
+        website.target = "_blank";
         website.rel = "noopener";
+
+        const level = document.createElement("p");
+        level.textContent = `Membership Level: ${getMembershipText(member.membershipLevel)}`;
 
         card.appendChild(img);
         card.appendChild(name);
         card.appendChild(info);
         card.appendChild(phone);
         card.appendChild(website);
+        card.appendChild(level);
 
         spotlightContainer.appendChild(card);
     });
@@ -256,7 +269,8 @@ function displaySpotlights(members) {
 // ---loading spotlight member on the page---
 getMembers().then(allMembers => {
     const goldSilver = filterGoldSilver(allMembers);
-    const spotlights = getRandomMembers(goldSilver, 2);
+    const spotlights = getRandomMembers(goldSilver, 3);
     displaySpotlights(spotlights);
+
 });
 

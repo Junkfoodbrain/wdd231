@@ -37,13 +37,38 @@
         align-items: stretch;
     }
 
-    #forecast-list {
+    
+    #forecast-list {        
         grid-template-columns: repeat(3, 1fr);
+
     }
 
+   
     .spotlight {
         grid-column: 1 / -1;
     }
 
+    #spotlight-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
 
+    .spotlight-card {
+        flex: 1 1 0;
+        max-width: 300px;
+    }
+
+}
+
+@media (min-width: 700px) and (max-width: 1014px) {
+    #forecast-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1015px) {
+    #forecast-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
