@@ -141,8 +141,7 @@ main {
     border-radius: 0.6rem;
 }
 
-.weather .card {
-    display: grid;
+.weather .card {    
     grid-template-columns: auto 1fr;
     gap: 0.5rem 0.8rem;    
     display: flex;
