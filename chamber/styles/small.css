@@ -144,8 +144,9 @@ main {
 .weather .card {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 0.5rem 0.8rem;
-    align-items: center;
+    gap: 0.5rem 0.8rem;    
+    display: flex;
+    flex-wrap: wrap;     
 }
 
 .weather .card h3,
@@ -157,6 +158,12 @@ main {
 .weather .card img {
     width: 72px;
     height: 72px;
+}
+
+.weather .card p {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
 }
 
 .forecast {
