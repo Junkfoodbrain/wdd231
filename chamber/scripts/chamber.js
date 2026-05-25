@@ -159,7 +159,7 @@ async function fetchForecast() {
     } catch (error) {
         forecastList.innerHTML = "<li>Forecast unavailable.<li/>";
         console.error("Forecast fetch failed:", error);
-    }    
+    }
 }
 
 function displayForecast(list) {
@@ -184,10 +184,79 @@ function displayForecast(list) {
         <span style="text-transform:capitalize">${day.weather[0].description}</span>
         `;
         forecastList.appendChild(li);
-
     });
 }
 
-// --start the processes--
+// --start the processes for fetching weather and forecast data--
 apiFetch();
 fetchForecast();
+
+
+// ---Chamber member spotlight---
+async function getMembers() {
+    const response = await fetch(`data/members.json`);
+    if (response.ok) {
+        const data = await response.json();
+        return data.members;
+    } else {
+        console.error('Failed to fetch members.json');
+        return [];
+    }
+}
+
+function filterGoldSilver(members) {
+    return members.filter(member =>
+        member.membership === "Gold" || member.membership === "Silver"
+    );
+}
+function getRandomMembers(members, count = 2) {
+    const shuffled = members.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
+function displaySpotlights(members) {
+    const spotlightContainer = document.getElementById("spotlight-container");
+    spotlightContainer.innerHTML = "";
+
+    members.forEach(member => {
+        const card = document.createElement("div");
+        card.classList.add("spotlight-card");
+
+        const img = document.createElement("img");
+        img.src = member.image;
+        img.alt = `${member.name} logo`;
+        img.loading = "lazy";
+        img.width = 150;
+        img.height = 100;
+
+        const name = document.createElement("h3");
+        name.textContent = member.name;
+
+        const info = document.createElement("p");
+        info.textContent = member.address;
+
+        const phone = document.createElement("p");
+        info.textContent = member.phone;
+
+        const website = document.createelement("a");
+        website.href = member.website;
+        website.textContent = "Visit Website";
+        wesite.target = "_blank";
+        website.rel = "noopener";
+
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(info);
+        card.appendChild(phone);
+        card.appendChild(website);
+
+        spotlightContainer.appendChild(card);
+    });
+}
+
+// ---loading spotlight member on the page---
+getMembers().then(allMembers => {
+    const goldSilver = filterGoldSilver(allMembers);
+    const spotlights = getRandomMembers(goldSilver, 2);
+    displaySpotlights(spotlights);
+});
+
