@@ -8,9 +8,9 @@
     <meta property="og:description"
         content="WDD 231 | Leah Sorensen | Join the Roseville Chamber of Commerce and connect with local businesses and get involved with your community!">
     <meta property="og:image" content="https://junkfoodbrain.github.io/wdd231/chamber/images/roseville_hero2.jpg">
-    <meta property="og:url" content="https://junkfoodbrain.github.io/wdd231/chamber/index.html">
+    <meta property="og:url" content="https://junkfoodbrain.github.io/wdd231/chamber/join.html">
 
-    <title>WDD 231 | Roseville Chamber of Commerce - Chamber Project Home Page</title>
+    <title>WDD 231 | Roseville Chamber of Commerce - Chamber Project Join Page</title>
     <meta name="description"
         content="WDD 231 | Leah Sorensen | Join the Chamber - Make a difference in your commmunity!">
     <meta name="author" content="Leah Sorensen">
@@ -27,6 +27,7 @@
 
     <link rel="icon" href="images/rose_favicon.ico" type="image/x-icon">
     <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -38,13 +39,107 @@
     </header>
     <nav id="site-nav" class="navigation" aria-label="Primary">
         <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" aria-current="page">Join</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     <main>
-        
+        <h1>Membership Application</h1>
+        <section class="join-layout">
+            <form method="get" action="thankyou.html" class="join-form" aria-label="Membership application form">
+                <h2>Membership Application Form</h2>
+                <label for="firstName">First Name:</label>
+                <input name="firstName" id="firstName" type="text" title="Enter your first name"
+                    autocomplete="given-name" required />
+
+                <label for="lastName">Last Name:</label>
+                <input name="lastName" id="lastName" type="text" title="Enter your last name" autocomplete="family-name"
+                    required />
+
+                <label for="title">Organizational Title:</label>
+                <input name="title" id="title" type="text" title="Enter your organizational title"
+                    autocomplete="organization-title" pattern="[A-Za-z][A-Za-z\-\s]{6,}" required />
+
+                <label for="email">Email Address:</label>
+                <input name="email" id="email" type="email" title="Enter your email address" autocomplete="email"
+                    placeholder="name@example.com" required />
+
+                <label for="phone">Cell Phone:</label>
+                <input name="phone" id="phone" type="tel" title="Enter your cell phone number" autocomplete="tel"
+                    required />
+
+                <label for="organization">Business/Organization Name:</label>
+                <input name="organization" id="organization" type="text" title="Enter the name of your organization"
+                    autocomplete="organization" required />
+
+                <label for="organization-description">Business/Organization Description:</label>
+                <textarea id="organization-description" name="organization-description"
+                    title="Describe your business or organization" rows="5"></textarea>
+
+                <label for="membership-level">Membership Level:</label>
+                <select id="membership-level" name="membership-level" title="Select a membership level" required>
+                    <option value="" selected disabled>Select a membership level</option>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" value="Apply for Membership">
+            </form>
+
+            <section class="levels">
+                <h2>Membership Levels</h2>
+
+                <article class="membership-card">
+                    <h3>Non Profit Membership Level</h3>
+                    <button type="button" class="modal-btn" data-dialog="np-modal">Learn More</button>
+                </article>
+
+                <article class="membership-card">
+                    <h3>Bronze Membership Level</h3>
+                    <button type="button" class="modal-btn" data-dialog="bronze-modal">Learn More</button>
+                </article>
+
+                <article class="membership-card">
+                    <h3>Silver Membership Level</h3>
+                    <button type="button" class="modal-btn" data-dialog="silver-modal">Learn More</button>
+                </article>
+
+                <article class="membership-card">
+                    <h3>Gold Membership Level</h3>
+                    <button type="button" class="modal-btn" data-dialog="gold-modal">Learn More</button>
+                </article>
+            </section>
+        </section>
+
+
+        <dialog id="np-modal">
+            <h2>NP Membership</h2>
+            <p>No annual fee. Includes chamber newsletter, event calendar access, and community promotion options</p>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+        <dialog id="bronze-modal">
+            <h2>Bronze Membership</h2>
+            <p>Entry-level paid tier with directory spotlight rotations, networking event discounts, and basic training
+                access.</p>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+        <dialog id="silver-modal">
+            <h2>Silver Membership</h2>
+            <p>Includes Bronze benefits plus enhanced advertising options, featured event opportunities, and workshops.
+            </p>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+        <dialog id="gold-modal">
+            <h2>Gold Membership</h2>
+            <p>Premium tier with top spotlight placement, priority sponsorship opportunities, and advanced business
+                training.</p>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
     </main>
 
 
@@ -58,4 +153,5 @@
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
+
 </html>
