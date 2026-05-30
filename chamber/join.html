@@ -50,42 +50,50 @@
         <section class="join-layout">
             <form method="get" action="thankyou.html" class="join-form" aria-label="Membership application form">
                 <h2>Membership Application Form</h2>
-                <label for="firstName">First Name:</label>
-                <input name="firstName" id="firstName" type="text" title="Enter your first name"
-                    autocomplete="given-name" required />
+                <label for="firstName">First Name:
+                    <input name="firstName" id="firstName" type="text" title="Enter your first name"
+                        autocomplete="given-name" required/>
+                </label>
 
-                <label for="lastName">Last Name:</label>
-                <input name="lastName" id="lastName" type="text" title="Enter your last name" autocomplete="family-name"
-                    required />
+                <label for="lastName">Last Name:
+                    <input name="lastName" id="lastName" type="text" title="Enter your last name" autocomplete="family-name"
+                        required/>
+                </label>
 
-                <label for="title">Organizational Title:</label>
-                <input name="title" id="title" type="text" title="Enter your organizational title"
-                    autocomplete="organization-title" pattern="[A-Za-z][A-Za-z\-\s]{6,}" required />
+                <label for="title">Organizational Title:
+                    <input name="title" id="title" type="text" title="Enter your organizational title"
+                        autocomplete="organization-title" pattern="[A-Za-z][A-Za-z\-\s]{6,}" required/>
+                </label>
 
-                <label for="email">Email Address:</label>
-                <input name="email" id="email" type="email" title="Enter your email address" autocomplete="email"
-                    placeholder="name@example.com" required />
+                <label for="email">Email Address:
+                    <input name="email" id="email" type="email" title="Enter your email address" autocomplete="email"
+                        placeholder="name@example.com" required/>
+                </label>
 
-                <label for="phone">Cell Phone:</label>
-                <input name="phone" id="phone" type="tel" title="Enter your cell phone number" autocomplete="tel"
-                    required />
+                <label for="phone">Cell Phone:
+                    <input name="phone" id="phone" type="tel" title="Enter your cell phone number" autocomplete="tel"
+                        required/>
+                </label>
 
-                <label for="organization">Business/Organization Name:</label>
-                <input name="organization" id="organization" type="text" title="Enter the name of your organization"
-                    autocomplete="organization" required />
+                <label for="organization">Business/Organization Name:
+                    <input name="organization" id="organization" type="text" title="Enter the name of your organization"
+                        autocomplete="organization" required/>
+                </label>
 
-                <label for="organization-description">Business/Organization Description:</label>
-                <textarea id="organization-description" name="organization-description"
-                    title="Describe your business or organization" rows="5"></textarea>
+                <label for="organization-description">Business/Organization Description:
+                    <textarea id="organization-description" name="organization-description"
+                        title="Describe your business or organization" rows="5"></textarea>
+                </label>
 
-                <label for="membership-level">Membership Level:</label>
-                <select id="membership-level" name="membership-level" title="Select a membership level" required>
-                    <option value="" selected disabled>Select a membership level</option>
-                    <option value="np">NP Membership</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
+                <label for="membership-level">Membership Level:
+                    <select id="membership-level" name="membership-level" title="Select a membership level" required>
+                        <option value="" selected disabled>Select a membership level</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
 
                 <input type="hidden" id="timestamp" name="timestamp">
                 <input type="submit" value="Apply for Membership">
