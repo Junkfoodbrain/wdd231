@@ -10,7 +10,7 @@ const closeButtons = document.querySelectorAll(".close-modal");
 
 modalButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        const dialogID = button.CDATA_SECTION_NODE.dialog;
+        const dialogID = button.dataset.dialog;
         const dialog = document.getElementById(dialogID);
         if (dialog) {
             dialog.showModal();
@@ -21,7 +21,7 @@ modalButtons.forEach((button) => {
 
 closeButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        const dialog  button.closest("dialog");
+        const dialog = button.closest("dialog");
         if (dialog) {
             dialog.close();
         }
