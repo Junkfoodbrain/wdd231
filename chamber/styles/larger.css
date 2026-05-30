@@ -59,14 +59,25 @@
         max-width: 300px;
     }
 
+    /* ---large layout for membership application --- */
+    .join-layout {
+        grid-template-columns: minmax(320px, 1fr) minmax(280px, 1fr);
+        align-items: start;
+    }
+
+    .thankyou-card {
+        max-width: 700px;
+    }
 }
 
+/* --intermediate display for forecast ---- */
 @media (min-width: 700px) and (max-width: 1014px) {
     #forecast-list {
         grid-template-columns: 1fr;
     }
 }
 
+/* ---- larger display for forecast ---  */
 @media (min-width: 1015px) {
     #forecast-list {
         grid-template-columns: repeat(3, 1fr);
