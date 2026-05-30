@@ -33,17 +33,17 @@
     }
 
     .cards-main {
-        grid-template-columns: repeat(3, minmax(0,1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         align-items: stretch;
     }
 
-    
-    #forecast-list {        
+
+    #forecast-list {
         grid-template-columns: repeat(3, 1fr);
 
     }
 
-   
+
     .spotlight {
         grid-column: 1 / -1;
     }
