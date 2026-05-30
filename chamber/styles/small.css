@@ -388,7 +388,7 @@ footer p {
 .join-form textarea:focus,
 .open-btn:focus,
 .close-modal:focus {
-    outline: 3px solid (var(--accent-color));
+    outline: 3px solid var(--accent-color);
     outline-offset: 1px;
 }
 
@@ -409,7 +409,7 @@ footer p {
     padding: 0.9rem;
     margin-bottom: 0.8rem;
     text-align: center;
-    background: #e7e3e5;
+    background: var(--secondary-color);    
     opacity: 0;
     transform: translateY(12px);
     animation: card-reveal 600ms ease forwards;
@@ -429,7 +429,7 @@ footer p {
 
 .membership-card h3 {
     margin: 0 0 0.7rem;
-    color: var(--secondary-color);
+    color: var(--text-light);
     font-family: "Simonetta", serif;
 }
 
