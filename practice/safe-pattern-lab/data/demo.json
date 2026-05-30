@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "title": "Guard First",
+            "description": "Check that required elements exist before using them."
+        },
+        {
+            "title": "Try/Catch",
+            "description": "Wrap async fetch logic in try/catch and show a user message on failure."
+        },
+        {
+            "title": "Single Responsibility",
+            "description": "Keep setup functions small and page-specific."
+        }
+    ]
+}

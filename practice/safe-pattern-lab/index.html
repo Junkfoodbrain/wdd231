@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Pattern Lab</title>
+    <link rel="stylesheet" href="../../chamber/styles/normalize.css">
+    <style>
+        body {
+            font-family: Roboto, Arial, sans-serif;
+            margin: 0;
+            background: #f3f0ed;
+            color: #1e1e1e;
+        }
+
+        header,
+        footer {
+            background: #4c3847;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .navigation {
+            display: none;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 0.5rem 1rem;
+        }
+
+        .navigation.show {
+            display: block;
+        }
+
+        .hamburger {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 0.35rem;
+            padding: 0.35rem 0.6rem;
+            cursor: pointer;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        #status {
+            margin-top: 1rem;
+            font-weight: 700;
+        }
+    </style>
+    <script src="scripts/lab.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false">Menu</button>
+        <h1>Safe Pattern Lab</h1>
+    </header>
+
+    <nav id="site-nav" class="navigation" aria-label="Practice Navigation">
+        Practice links go here.
+    </nav>
+
+    <main>
+        <h2>Goal</h2>
+        <p>This page is for practicing safe JavaScript patterns without affecting your graded pages.</p>
+
+        <button id="load-data">Load Demo Data</button>
+        <p id="status">Status: waiting</p>
+        <section id="content-area" class="card" aria-label="Demo content output"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Practice Lab</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
