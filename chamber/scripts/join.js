@@ -5,10 +5,10 @@ if (timestampField) {
     timestampField.value = new Date().toISOString();
 }
 
-const modalButtons = document.querySelectorAll(".modal-btn");
+const openButtons = document.querySelectorAll(".open-btn");
 const closeButtons = document.querySelectorAll(".close-modal");
 
-modalButtons.forEach((button) => {
+openButtons.forEach((button) => {
     button.addEventListener("click", () => {
         const dialogID = button.dataset.dialog;
         const dialog = document.getElementById(dialogID);

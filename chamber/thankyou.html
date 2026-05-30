@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Roseville Chamber of Commerce - Connect, Grow, and Thrive in Our Community.">
+    <meta property="og:description"
+        content="WDD 231 | Leah Sorensen | Join the Roseville Chamber of Commerce and connect with local businesses and get involved with your community!">
+    <meta property="og:image" content="https://junkfoodbrain.github.io/wdd231/chamber/images/roseville_hero2.jpg">
+    <meta property="og:url" content="https://junkfoodbrain.github.io/wdd231/chamber/thankyou.html">
+
+    <title>WDD 231 | Roseville Chamber of Commerce - Chamber Project Thank You Page</title>
+    <meta name="description"
+        content="WDD 231 | Leah Sorensen | Join the Chamber - Make a difference in your commmunity!">
+    <meta name="author" content="Leah Sorensen">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Simonetta&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 700px)">
+
+    <link rel="icon" href="images/rose_favicon.ico" type="image/x-icon">
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/rose.svg" alt="Chamber of Commerce logo" width="50" height="50">
+        <span>Roseville Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="site-nav"></button>
+    </header>
+    <nav id="site-nav" class="navigation" aria-label="Primary">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Thank you for completing the membership form!</h1>
+        <section class="thankyou-card" aria-label="Submitted application details">
+            <h2>Your Application Has Been Received</h2>
+            <p>We appreciate your interest in joining the Roseville chamber of Commerce.</p>
+
+            <dl class="submission-details">
+                <dt>First Name:</dt>
+                <dd id="display-firstName"></dd>
+
+                <dt>Last Name:</dt>
+                <dd id="display-lastName"></dd>
+
+                <dt>Email Address:</dt>
+                <dd id="display-email"></dd>
+
+                <dt>Cell Phone:</dt>
+                <dd id="display-phone"></dd>
+
+                <dt>Business/Organization Name:</dt>
+                <dd id="display-organization"></dd>
+
+                <dt>Submitted On:</dt>
+                <dd id="display-timestamp"></dd>
+            </dl>
+        </section>
+    </main>
+
+
+    <footer>
+        <nav class="social" aria-label="Social Media Links">
+            <a href="https://www.facebook.com" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://www.github.com" aria-label="Github"><img src="images/github.svg" alt="Github"></a>
+        </nav>
+        <p>&copy; <span id="currentyear"></span> Roseville Chamber of Commerce</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
