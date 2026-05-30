@@ -17,82 +17,6 @@ if (hamButton && navigation) {
 
 
 
-// ----reading JSON data and displaying on cards ---
-const Url = "data/members.json";
-
-const membersContainer = document.querySelector("#members");
-const gridButton = document.querySelector("#grid");
-const listButton = document.querySelector("#list");
-
-
-async function getMembers() {
-    try {
-        const response = await fetch(Url);
-        const data = await response.json();
-
-        displayMembers(data.members);
-    } catch (error) {
-        membersContainer.innerHTML = "<p>Member data could not be loaded.</p>";
-        console.error("Error fetching member data:", error);
-    }
-
-}
-
-function displayMembers(members) {
-    membersContainer.innerHTML = "";
-
-    members.forEach((member, index) => {
-        const card = document.createElement("article");
-
-        const logo = document.createElement("img");
-        logo.src = member.image;
-        logo.alt = `${member.name} logo`;
-        if (index === 0) {
-            logo.loading = "eager";
-            logo.fetchPriority = "high";
-        }
-        else {
-            logo.loading = "lazy";
-        }
-        logo.width = 300;
-        logo.height = 200;
-
-        const name = document.createElement("h2");
-        name.textContent = member.name;
-
-        const address = document.createElement("p");
-        address.textContent = member.address;
-
-        const phone = document.createElement("p");
-        phone.textContent = member.phone;
-
-        const website = document.createElement("a");
-        website.href = member.website;
-        website.target = "_blank";
-        website.rel = "noopener";
-        website.textContent = "visit Website";
-
-        const level = document.createElement("p");
-        level.textContent = `Membership Level: ${member.membershipLevel}`;
-
-        card.append(logo, name, address, phone, website, level);
-        membersContainer.appendChild(card);
-    });
-}
-
-if (membersContainer && gridButton && listButton) {
-    gridButton.addEventListener("click", () => {
-        membersContainer.classList.add("grid");
-        membersContainer.classList.remove("list");
-    });
-
-    listButton.addEventListener("click", () => {
-        membersContainer.classList.add("list");
-        membersContainer.classList.remove("grid");
-    });
-
-    getMembers();
-}
 
 // --footer content ---
 const today = new Date();
@@ -123,6 +47,7 @@ const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLa
 
 // --Try to grab the current weather data--
 async function apiFetch() {
+    if (!myTown || !myDescription || !myTemperature || !myGraphic) return;
     try {
         const response = await fetch(myUrl);
         if (response.ok) {
@@ -193,7 +118,7 @@ fetchForecast();
 
 
 // ---Chamber member spotlight---
-async function getMembers() {
+async function fetchMembers() {
     const response = await fetch(`data/members.json`);
     if (response.ok) {
         const data = await response.json();
@@ -222,6 +147,7 @@ function getMembershipText(level) {
 
 function displaySpotlights(members) {
     const spotlightContainer = document.getElementById("spotlight-container");
+    if (!spotlightContainer) return;
     spotlightContainer.innerHTML = "";
 
 
@@ -267,10 +193,9 @@ function displaySpotlights(members) {
 }
 
 // ---loading spotlight member on the page---
-getMembers().then(allMembers => {
+fetchMembers().then(allMembers => {
     const goldSilver = filterGoldSilver(allMembers);
     const spotlights = getRandomMembers(goldSilver, 3);
     displaySpotlights(spotlights);
-
 });
 
