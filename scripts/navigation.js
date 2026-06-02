@@ -9,11 +9,54 @@ document.getElementById('lastmodified').innerHTML = document.lastModified;
 const navbutton = document.querySelector('#ham-btn');
 const navlinks = document.querySelector('#nav-bar');
 
+const courseDetails = document.querySelector(`#course-details`);
+
 // ----Toggle the show class off and on-----
 navbutton.addEventListener('click', () => {
     navbutton.classList.toggle('show');
     navlinks.classList.toggle('show');
 })
+
+// -----course modal details----
+function displayCourseDetails(course) {
+    if (!courseDetails) {
+        return;
+    }
+
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal" aria-label="Close dialog">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+
+    const closeModal = courseDetails.querySelector('#closeModal');
+    if (closeModal) {    
+        closeModal.addEventListener("click", () => {
+            courseDetails.close();
+        });
+    }
+}
+
+if (courseDetails) {
+    courseDetails.addEventListener('click', (event) => {
+        const rect = courseDetails.getBoundingClientRect();
+        const clickedInside =
+            event.clientX >= rect.left &&
+            event.clientX <= rect.right &&
+            event.clientY >= rect.top &&
+            event.clientY <= rect.bottom;
+        
+        if (!clickedInside) {
+            courseDetails.close();
+        }
+    });
+}
 
 
 // ----Course Cards---
@@ -30,6 +73,10 @@ function createCourseCard(courseList) {
             card.classList.add('completed');
         }
         card.textContent = `${course.subject} ${course.number}`;
+        card.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+
         cardsContainer.appendChild(card);
     });
 
