@@ -36,7 +36,7 @@ function displayCourseDetails(course) {
     courseDetails.showModal();
 
     const closeModal = courseDetails.querySelector('#closeModal');
-    if (closeModal) {    
+    if (closeModal) {
         closeModal.addEventListener("click", () => {
             courseDetails.close();
         });
@@ -51,7 +51,7 @@ if (courseDetails) {
             event.clientX <= rect.right &&
             event.clientY >= rect.top &&
             event.clientY <= rect.bottom;
-        
+
         if (!clickedInside) {
             courseDetails.close();
         }
