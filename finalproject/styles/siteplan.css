@@ -16,3 +16,10 @@ body {
     padding: 20px; 
     background: var(--primary-color);   
 }
+
+div {
+    background: var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 8px solid var(--secondary-color);   
+}
