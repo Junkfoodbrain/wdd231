@@ -1,0 +1,18 @@
+* {    
+    font-family: "Atma", system-ui, Roboto, sans-serif;
+    --primary-color:#028CC7; 
+    --secondary-color:#72B6E5;
+    --accent-color:#CDB190;
+}
+
+
+
+header, footer {
+    background-color: black;
+    color: white;
+}
+
+body {
+    padding: 20px; 
+    background: var(--primary-color);   
+}
