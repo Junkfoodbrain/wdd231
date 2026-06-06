@@ -1,8 +1,17 @@
-* {    
-    font-family: "Atma", system-ui, Roboto, sans-serif;
-    --primary-color:#028CC7; 
+* {
+    --primary-color:#028CC7;
     --secondary-color:#72B6E5;
     --accent-color:#CDB190;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+    background: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Atma", cursive;
 }
 
 
@@ -12,9 +21,10 @@ header, footer {
     color: white;
 }
 
-body {
-    padding: 20px; 
-    background: var(--primary-color);   
+main {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 div {
