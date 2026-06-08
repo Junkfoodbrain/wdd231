@@ -483,3 +483,40 @@ dialog::backdrop {
     padding-bottom: 0.35rem;
     border-bottom: 1px dashed #b5aaaf;
 }
+
+/* ----cards for discover page---- */
+
+#allplaces div {
+    margin: 1rem 8px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    
+    display: grid;
+    grid-template-areas:
+    "name"
+    "photograph"
+    "description"
+    "location";
+}
+
+#allplaces div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+#allplaces div img {
+    width: 100%;
+    grid-area: photograph;
+}
+
+#allplaces div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+#allplaces div address {
+    margin: 1rem 10px;
+    grid-area: location;
+}
