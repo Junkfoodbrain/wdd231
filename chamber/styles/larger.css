@@ -68,11 +68,7 @@
     .thankyou-card {
         max-width: 700px;
     }
-}
-
-/* ---adding media query for larger displays to make the directory page---- */
-
-@media only screen and (min-width: 64rem) {
+    /* ----directory page----     */
     #places {
         display: grid;
         gap: 1rem;
@@ -91,3 +87,6 @@
         filter: brightness(1.05);
     }
 }
+
+
+
