@@ -45,6 +45,17 @@ function buildCard(place, index) {
     image.width = 300;
     image.height = 200;
     image.loading = "lazy";
+    if (index === 0) {
+        image.loading = "eager";
+        image.fetchPriority = "high";
+        image.decoding = "sync";
+    } else {
+        image.loading = "lazy";
+        image.fetchPriority = "low";
+        image.decoding = "async";
+    }
+}
+    
     figure.appendChild(image);
 
     const address = document.createElement("address");
