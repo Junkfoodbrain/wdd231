@@ -544,18 +544,40 @@ dialog::backdrop {
     grid-template-areas:
         "name"
         "photograph"
+        "location"
         "description"
-        "location";
+        "button";
+    grid-template-rows: auto auto auto 1fr auto;
+    height: 100%;
 }
 
 #places article h2 {
     margin: 1rem 10px;
     grid-area: name;
+    min-height: 3.5rem;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+}
+
+#places article figure {
+    grid-area: photograph;
+    margin: 0;
+    padding: 0.75rem 0.75rem;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
 }
 
 #places article img {
     width: 100%;
-    grid-area: photograph;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.35rem;
 }
 
 #places article p {
@@ -566,4 +588,23 @@ dialog::backdrop {
 #places article address {
     margin: 1rem 10px;
     grid-area: location;
+    font-style: normal;
+}
+
+#places article button {
+    grid-area: button;
+    margin: 0 10px 1rem;
+    width: 9rem;
+    min-height: 2.75rem;
+    justify-self: start;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.4rem;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#places article button:hover {
+    background-color: var(--accent-color);
 }
