@@ -1,17 +1,21 @@
 /* ----medium.css between min-width 38rem and 64rem */
 
 
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 38rem) and (max-width: 63.99rem) {
 
+    #places {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "one two"
+            "three four"
+            "five six"
+            "seven eight";
+    }
 
-    #allplaces div {     
-          
-            grid-template-areas:
-                "photograph name"
-                "photograph description"                
-                "photograph location";
-        }  
-       #allplacees div img {
-        width: 300px;
-       }  
+    #forecast-list {
+        grid-template-columns: 1fr;
+    }
+    
 }

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 64rem) {
     .hamburger {
         display: none;
     }
@@ -70,25 +70,24 @@
     }
 }
 
-/* --intermediate display for forecast ---- */
-@media (min-width: 700px) and (max-width: 1014px) {
-    #forecast-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ---- larger display for forecast ---  */
-@media (min-width: 1015px) {
-    #forecast-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 /* ---adding media query for larger displays to make the directory page---- */
 
 @media only screen and (min-width: 64rem) {
-    #allplaces {
+    #places {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "one two three four"
+            "five six seven eight";
+    }
+
+    #places img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    #places img:hover {
+        transform: scale(1.04);
+        filter: brightness(1.05);
     }
 }

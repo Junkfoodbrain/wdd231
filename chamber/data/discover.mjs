@@ -9,42 +9,42 @@ export const places = [
         name: "Blue Line Arts",
         address: "405 Vernon St, Suite 100, Roseville, CA 95678",
         description: "Community art gallery featuring rotating exhibitions and local artists.",
-        photoUrl: "https://www.bluelinearts.org/wp-content/uploads/2022/05/Blue-Line-Arts-Building.jpg"
+        photoUrl: "blue_line.webp"
     },
     {
         name: "Roseville Telephone Museum",
         address: "106 Vernon St, Roseville, CA 95678",
         description: "Small specialty museum showing vintage telephones and communication technology history.",
-        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/6/60/Old_telephone_switchboard.jpg"
+        photoUrl: "roseville_telephone.webp"
     },
     {
         name: "Westfield Galleria at Roseville",
         address: "1151 Galleria Blvd, Roseville, CA 95678",
         description: "Major indoor shopping center with retail, dining, and entertainment.",
-        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Westfield_Galleria_at_Roseville.jpg"
+        photoUrl: "westfield_galleria_at_roseville.webp"
     },
     {
         name: "Fountains at Roseville",
         address: "1013 Galleria Blvd, Roseville, CA 95678",
         description: "Outdoor shopping and dining plaza with water features and event space.",
-        photoUrl: "https://www.rosevilletoday.com/images/stories/fountains-roseville-shopping.jpg"
+        photoUrl: "fountains.webp"
     },
     {
         name: "Golfland Sunsplash",
         address: "1893 Taylor Rd, Roseville, CA 95661",
         description: "Family attraction with mini golf, water slides, and arcade games.",
-        photoUrl: "https://www.golfland.com/sunsplash/wp-content/uploads/sites/3/2021/05/roseville-hero.jpg"
+        photoUrl: "golfland_sunsplash_roseville.webp"
     },
     {
         name: "Downtown Roseville (Vernon Street area)",
         address: "311 Vernon St, Roseville, CA 95678",
         description: "Historic downtown district with local shops, restaurants, and events.",
-        photoUrl: "https://www.rosevilletoday.com/images/stories/downtown-roseville-vernon-street.jpg"
+        photoUrl: "downtown.webp"
     },
     {
         name: "Mahany Park",
         address: "1545 Pleasant Grove Blvd, Roseville, CA 95747",
         description: "Large city park with sports fields, trails, and recreation facilities.",
-        photoUrl: "https://www.roseville.ca.us/common/pages/DisplayFile.aspx?itemId=15494618"
+        photoUrl: "mahany.webp"
     }
 ];

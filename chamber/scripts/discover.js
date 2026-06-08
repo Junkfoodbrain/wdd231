@@ -1,6 +1,32 @@
 import { places } from "../data/discover.mjs";
 
 
+// ---visit message---
+const visitMessage = document.querySelector("#visit-message");
+
+function displayVisitMessage() {
+    if (!visitMessage) return;
+
+    const now = Date.now();
+    const lastVisit = Number(localStorage.getItem("discoverLastVisit"));
+
+    if (!lastVisit) {
+        visitMessage.textContent = "Welcome! Let us know if you have any questions"
+    } else {
+        const msPerDay = 1000 * 60 * 60 * 24;
+        const daysBetween = Math.floor((now - lastVisit) / msPerDay);
+
+        if (daysBetween < 1) {
+            visitMessage.textContent = "It's great to see you back so soon!";
+        } else if (daysBetween === 1) {
+            visitMessage.textContent = "You last visited 1 day ago.";            
+        } else {
+            visitMessage.textContent = `You last visited ${daysBetween} days ago.`;
+        }
+    }
+    localStorage.setItem("discoverLastVisit", String(now));
+}
+
 // ---creating the cards for the discover page---
 
 const placesContainer = document.querySelector("#places");
@@ -14,12 +40,12 @@ function buildCard(place, index) {
 
     const figure = document.createElement("figure");
     const image = document.createElement("img");
-    image.src = place.photoUrl;
+    image.src = `images/${place.photoUrl}`;
     image.alt = place.name;
     image.width = 300;
     image.height = 200;
-    image.loading - "lazy";
-    figure.appendchild(image);
+    image.loading = "lazy";
+    figure.appendChild(image);
 
     const address = document.createElement("address");
     address.textContent = place.address;
@@ -45,6 +71,7 @@ function displayPlaces(data) {
     });
 }
 
+displayVisitMessage();
 displayPlaces(places);
 
 
