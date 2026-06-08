@@ -83,3 +83,12 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* ---adding media query for larger displays to make the directory page---- */
+
+@media only screen and (min-width: 64rem) {
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
