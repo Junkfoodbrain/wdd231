@@ -43,8 +43,7 @@ function buildCard(place, index) {
     image.src = `images/${place.photoUrl}`;
     image.alt = place.name;
     image.width = 300;
-    image.height = 200;
-    image.loading = "lazy";
+    image.height = 200;    
     if (index === 0) {
         image.loading = "eager";
         image.fetchPriority = "high";
@@ -54,7 +53,6 @@ function buildCard(place, index) {
         image.fetchPriority = "low";
         image.decoding = "async";
     }
-}
     
     figure.appendChild(image);
 
