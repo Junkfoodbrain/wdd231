@@ -484,6 +484,46 @@ dialog::backdrop {
     border-bottom: 1px dashed #b5aaaf;
 }
 
+#visit-message {
+    margin-top: 0; 
+    text-align: right;     
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.discover-main {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "hero hero"
+        "title message"
+        "places places";
+    column-gap: 1rem;
+    row-gap: 0.75rem;
+    row-gap: 0.75rem;
+    align-items: center;
+}
+
+.discover-main .hero {
+    grid-area: hero;
+}
+
+.discover-main h1 {
+    grid-area: title;
+    margin: 0;
+}
+
+.discover-main #visit-message {
+    grid-area: message;
+    margin: 0;
+    align-self: center;
+}
+
+.discover-main #places {
+    grid-area: places;
+}
+
 /* ----cards for discover page---- */
 
 #places {
