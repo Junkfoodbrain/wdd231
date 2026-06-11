@@ -1,0 +1,24 @@
+
+/* desktop nav */
+@media (min-width: 700px) {
+    #menu-button {
+        display: none;
+    }
+
+    #primary-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+/* desktop option cards */
+@media (min-width: 700px) {
+    .home-options {
+        flex-direction: row;
+    }
+
+    .option-card {
+        flex: 1;
+    }
+}
