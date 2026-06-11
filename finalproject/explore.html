@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calypso Community | Explore Fish</title>
+    <meta name="description" content="Explore Pacific fish species with detailed profiles and filtering by care level.">
+    <meta name="author" content="Leah Sorensen">
+    <meta property="og:title" content="Explore Pacific Fish | Calypso Community">
+    <meta property="og:description"
+        content="Browse 15+ Pacific fish species and learn about their habitat, temperament, and care requirements.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ocean_screenshot.jpg">
+    <link rel="icon" href="images/fish.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/explore.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <h1>Calypso Community</h1>
+            <p>Dive into Pacific life and local ocean events.</p>
+        </div>
+
+        <button id="menu-button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">menu
+        </button>
+
+        <nav id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="explore.html" aria-current="page">Explore</a>
+            <a href="dive.html">Local Dive Signup</a>
+            <a href="auction.html">Fish Auction</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Explore Pacific Fish</h2>
+            <p>Filter by care level and click a card for more details.</p>
+        </section>
+
+        <section class="filter-section">
+            <label for="care-filter">Care level:</label>
+            <select id="care-filter">
+                <option value="all">All</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="expert">Expert</option>
+            </select>
+        </section>
+
+        <section id="fish-grid" class="fish-grid"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Leah Sorensen</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+        <p><a href="attributions.html">Attributions</a> | <a href="#">Video Demo</a></p>
+    </footer>
+</body>
+
+</html>
