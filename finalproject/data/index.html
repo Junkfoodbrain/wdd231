@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calypso Community | Home</title>
+    <meta name="description" content="WDD231 | Calypso Community home page with pathways to explore Pacific fish,
+     sign up for local dives, and participate in exclusive fish auctions.">
+    <meta name="author" content="Leah Sorensen">
+    <meta property="og:title" content="Calypso Community">
+    <meta property="og:description" content="Explore fish, local dives and community auctions.">
+    <meta property="og:type" content="website">
+    <meta property="og image" content="images/ocean_screenshot.jpg">
+    <link rel="icon" href="images/fish.ico">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <h1>Calypso Community</h1>
+            <p>Dive into Pacific life and local ocean events.</p>
+        </div>
+
+        <button id="menu-button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">menu
+        </button>
+
+        <nav id="primary-nav">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="dive.html">Local Dive Signup</a>
+            <a href="auction.html">Fish Auction</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Your Pacific Adventure Starts Here</h2>
+            <p>Choose your path and connect with the Calypso community.</p>
+        </section>
+
+        <section class="home-options" aria-label="Main options">
+            <article class="option-card">
+                <h3>Explore Fish in the Pacific Ocean</h3>
+                <p>Browse fish profiles with habitat, region, temperament, and care level.</p>
+                <a href="explore.html">Start Exploring</a>
+            </article>
+
+            <article class="option-card">
+                <h3>Sign Up for a Local Dive</h3>
+                <p>Reserve your dive spot and connect with nearby ocean enthusiasts.</p>
+                <a href="dive.html">Sign Up</a>
+            </article>
+
+            <article class="option-card">
+                <h3>Participate in Fish Auction</h3>
+                <p>Join as a buyer or seller in upcoming local fish auction events.</p>
+                <a href="auction.html">Join Auction</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Leah Sorensen</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+        <p><a href="attributions.html">Attributions</a> | <a href="#">Video Demo</a></p>
+    </footer>
+
+</body>
+
+</html>

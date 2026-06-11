@@ -5,6 +5,8 @@ if (timestampField) {
     timestampField.value = new Date().toISOString();
 }
 
+
+// ----dialog and modal buttons----
 const openButtons = document.querySelectorAll(".open-btn");
 const closeButtons = document.querySelectorAll(".close-modal");
 
