@@ -21,3 +21,17 @@
         flex: 1;
     }
 }
+
+
+/* fish */
+@media (min-width: 700px) {
+    .fish-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1000px) {
+    .fish-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

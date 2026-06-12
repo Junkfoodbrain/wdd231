@@ -61,6 +61,23 @@ main {
     border-radius: 10px;
 }
 
+.fish-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.fish-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    border-radius: 6px;
+    display: block;
+    background: #0a2f4a;
+}
+
 
 
 /* footer */

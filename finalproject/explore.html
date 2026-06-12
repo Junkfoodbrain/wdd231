@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/main.js" defer></script>
     <script src="scripts/explore.js" defer></script>
 </head>
 
@@ -51,15 +52,20 @@
         <section class="filter-section">
             <label for="care-filter">Care level:</label>
             <select id="care-filter">
-                <option value="all">All</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-                <option value="expert">Expert</option>
+                <option value="All">All</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Expert">Expert</option>
             </select>
         </section>
 
         <section id="fish-grid" class="fish-grid"></section>
+        <dialog id="fish-modal">
+            <h3 id="modal-title"></h3>
+            <p id="modal-body"></p>
+            <button id="close-modal" type="button">Close</button>
+        </dialog>
     </main>
 
     <footer>
