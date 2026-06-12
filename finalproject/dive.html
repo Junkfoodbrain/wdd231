@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/dive.js" defer></script>
 </head>
 <body>
     <header>
@@ -35,7 +36,16 @@
             <a href="auction.html">Fish Auction</a>
         </nav>
     </header>
-    <main>    
+    <main>
+        <section class="dive-hero">
+            <h2>Local Dive Signup</h2>
+            <p>Reserve your dive spot and launch bubbles.</p>
+            <button id="bubble-button" type="button">Release Bubbles</button>
+            <div id="bubble-field" aria-hidden="true"></div>            
+        </section>
+        <section class="dive-form-section">
+            <form action="thankyou.html" method="get"><!--your fields--></form>
+        </section>
     </main>
 
     <footer>

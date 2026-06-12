@@ -78,6 +78,36 @@ main {
     background: #0a2f4a;
 }
 
+/* ----bubbles styling--- */
+.dive-hero {
+    position: relative;
+    padding: 1rem;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.6)), url("../images/ocean_screenshot.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 280px;
+}
+
+#bubble-field {
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+}
+.bubble {
+    position: absolute;
+    bottom: -20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.55);
+    animation-name: rise;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes rise {
+    from {transform: translateY(0); opacity: .9;}
+    to {transform: translateY(-140px); opacity:0;}
+}
+
 
 
 /* footer */
