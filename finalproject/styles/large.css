@@ -8,10 +8,10 @@
         display: flex;
         flex-direction: row;
         gap: 1rem;
-    }
+    }    
 }
 
-/* desktop option cards */
+/* desktop option cards*/
 @media (min-width: 700px) {
     .home-options {
         flex-direction: row;
@@ -20,6 +20,7 @@
     .option-card {
         flex: 1;
     }
+        
 }
 
 
@@ -33,5 +34,13 @@
 @media (min-width: 1000px) {
     .fish-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ---dive hero--- */
+@media (min-width: 700px) {
+    .dive-hero {
+        min-height: 380px;
+        background-position: center 30%;
     }
 }

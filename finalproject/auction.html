@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calypso Community | Auction</title>
+    <meta name="description" content="WDD231 | Calypso Community auction page with exclusive fish auctions.">
+    <meta name="author" content="Leah Sorensen">
+    <meta property="og:title" content="Calypso Community">
+    <meta property="og:description" content="Participate in exclusive fish auctions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ocean_screenshot.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="images/fish.ico">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/auction.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="dive.html">Local Dive Signup</a>
+            <a href="auction.html" aria-current="page">Fish Auction</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Community Fish Auction</h2>
+            <p>Register for the next event as a buyer, a seller, or both.</p>
+        </section>
+
+        <section class="auction-form-section">
+            <form id="auction-form" action="thankyou.html" method="get">
+                <label for="auction-name">Full Name</label>
+                <input id="auction-name" name="name" type="text" required>
+
+                <label for="auction-email">Email</label>
+                <input id="auction-email" name="email" type="email" placeholder="123@email.com" required>
+
+                <fieldset>
+                    <legend>Particicpation Type</legend>
+
+                    <label for="role-buyer">
+                        <input id="role-buyer" type="radio" name="role" value="Buyer" required>
+                        Buyer
+                    </label>
+
+                    <label for="role-seller">
+                        <input id="role-seller" type="radio" name="role" value="Seller" required>
+                        Seller
+                    </label>
+
+                    <label for="role-both">
+                        <input id="role-both" type="radio" name="role" value="Both" required>
+                        Both
+                    </label>
+
+                    <p id="saved-role-message"></p>
+
+                    <label for="auction-date">Preferred Auction Date</label>
+                    <input id="auction-date" name="date" type="date" required>
+
+                    <button type="submit">Reserve Auction Spot</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

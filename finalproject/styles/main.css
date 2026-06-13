@@ -83,10 +83,11 @@ main {
     position: relative;
     padding: 1rem;
     border-radius: 10px;
-    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url("../images/ocean_screenshot.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .35)), url("../images/ocean_screenshot.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     min-height: 280px;
+    overflow: hidden;
 }
 
 #bubble-field {
@@ -119,6 +120,110 @@ main {
     }
 }
 
+/* ---dive form styling--- */
+.dive-form-section {
+    background-color: #CDB190;
+    color: #000000;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.dive-form-section form {
+    display: grid;
+    gap: 1rem;
+}
+
+.dive-form-section label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.dive-form-section input[type="text"],
+.dive-form-section input[type="email"],
+.dive-form-section input[type="date"],
+.dive-form-section select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #028CC7;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dive-form-section input[type="text"]:focus,
+.dive-form-section input[type="email"]:focus,
+.dive-form-section input[type="date"]:focus,
+.dive-form-section select:focus {
+    outline: none;
+    border-color: #72B6E5;
+}
+
+.dive-form-section fieldset {
+    border: 2px solid #028CC7;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 0;
+}
+
+.dive-form-section legend {
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+
+.dive-form-section fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dive-form-section input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.dive-form-section button[type="submit"] {
+    background-color: #028CC7;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Atma", cursive;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.dive-form-section button[type="submit"]:hover {
+    background-color: #0a4a8a;
+    box-shadow: 0 0 4px rgba(114, 182, 229, 0.5);
+}
+
+
+.auction-form-section {
+    background-color: #CDB190;
+    color: #000000;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.auction-form-section form {
+    display: grid;
+    gap: 1rem;
+}
+
+.auction-form-section fieldset {
+    border: 2px solid #028CC7;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 0;
+}
 
 
 /* footer */

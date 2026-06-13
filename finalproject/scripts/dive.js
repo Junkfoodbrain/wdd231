@@ -5,7 +5,7 @@ const bubbleButton = document.getElementById("bubble-button");
 const bubbleField = document.getElementById("bubble-field");
 
 if (bubbleButton && bubbleField) {
-    bubbleButton.addEventListener("click", () => { 
+    bubbleButton.addEventListener("click", () => {
         for (let i = 0; i < 12; i += 1) {
             const bubble = document.createElement("span");
             bubble.className = "bubble";

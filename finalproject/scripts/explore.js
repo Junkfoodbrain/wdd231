@@ -27,7 +27,7 @@ async function loadFishData() {
         const response = await fetch("data/pacific-fish.json");
 
         if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);            
+            throw new Error(`HTTP error: ${response.status}`);
         }
 
         fishData = await response.json();
@@ -65,7 +65,7 @@ function renderFishCards() {
         detailsButton.addEventListener("click", () => {
             openFishModal(fish);
         });
-    
+
         fishGrid.appendChild(card);
     });
 }

@@ -1,7 +1,6 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +12,20 @@
     <meta property="og:description" content="Explore fish, local dives and community auctions.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/ocean_screenshot.jpg">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
-    
+
     <link rel="icon" href="images/fish.ico">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/dive.js" defer></script>
-    
+
 </head>
+
 <body>
     <header>
 
@@ -42,10 +42,45 @@
             <h2>Local Dive Signup</h2>
             <p>Reserve your dive spot and launch bubbles.</p>
             <button id="bubble-button" type="button">Release Bubbles</button>
-            <div id="bubble-field" aria-hidden="true"></div>            
+            <div id="bubble-field" aria-hidden="true"></div>
         </section>
         <section class="dive-form-section">
-            <form action="thankyou.html" method="get"><!--your fields--></form>
+            <form action="thankyou.html" method="get">
+
+                <label for="diver-name">Full Name</label>
+                <input id="diver-name" name="name" type="text" required>
+
+                <label for="diver-email">Email</label>
+                <input id="diver-email" name="email" type="email" placeholder="123@email.com" required>                
+
+                <label for="experience-level">Experience Level</label>
+                <select id="experience-level" name="experience" required>
+                    <option value="">Select one</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <fieldset>
+                    <legend>Will you need rental gear? Let us know and we will reserve it for you.</legend>
+                    <label for="gear-yes">
+                        <input id="gear-yes" name="gear" type="radio" value="Yes" required>
+                        Yes
+                    </label>
+                
+                    <label for="gear-no">
+                        <input id="gear-no" name="gear" type="radio" value="No" required>
+                        No
+                    </label>
+                </fieldset>
+
+                <label for="dive-date">Preferred Dive Date</label>
+                <input id="dive-date" name="date" type="date" required>
+
+                <button type="submit">Reserve Dive Spot</button>
+
+                
+            </form>
         </section>
     </main>
 
@@ -54,6 +89,7 @@
         <p>Last Modified: <span id="lastmodified"></span></p>
         <p><a href="attributions.html">Attributions</a> | <a href="#">Video Demo</a></p>
     </footer>
-    
+
 </body>
+
 </html>
