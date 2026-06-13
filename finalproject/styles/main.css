@@ -83,7 +83,7 @@ main {
     position: relative;
     padding: 1rem;
     border-radius: 10px;
-    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.6)), url("../images/ocean_screenshot.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url("../images/ocean_screenshot.jpg");
     background-size: cover;
     background-position: center;
     min-height: 280px;
@@ -93,21 +93,30 @@ main {
     position: relative;
     height: 120px;
     overflow: hidden;
-   
+
 }
+
 .bubble {
     position: absolute;
     display: block;
     bottom: -20px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.55);    
+    background-color: rgba(255, 255, 255, 0.55);
     animation-name: rise;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
+
 @keyframes rise {
-    from {transform: translateY(0); opacity:.9;}
-    to {transform: translateY(-140px); opacity:0;}
+    from {
+        transform: translateY(0);
+        opacity: .9;
+    }
+
+    to {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
 }
 
 
