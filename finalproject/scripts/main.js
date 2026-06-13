@@ -1,7 +1,15 @@
 // ---last modified date---
 const today = new Date();
-document.getElementById("lastmodified").innerHTML = document.lastModified;
-document.getElementById("currentyear").textContent = today.getFullYear();
+const lastModifiedNode = document.getElementById("lastmodified");
+const currentYearNode = document.getElementById("currentyear");
+
+if (lastModifiedNode) {
+    lastModifiedNode.innerHTML = document.lastModified;
+}
+
+if (currentYearNode) {
+    currentYearNode.textContent = today.getFullYear();
+}
 
 // -----menu toggle---
 const menuButton = document.getElementById("menu-button");
