@@ -322,3 +322,21 @@ footer {
     padding: 1rem;
     text-align: center;
 }
+
+footer a,
+footer a:visited {
+    color: #72B6E5;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: #CDB190;
+    text-decoration-thickness: 2px;   
+}
+
+footer a:focus-visible {
+    outline: 2px solid #72B6E5;
+    outline-offset: 2px;
+}
