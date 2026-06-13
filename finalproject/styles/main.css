@@ -93,15 +93,14 @@ main {
     position: relative;
     height: 120px;
     overflow: hidden;
-    border: 2px solid yellow;
+   
 }
 .bubble {
     position: absolute;
     display: block;
     bottom: -20px;
     border-radius: 50%;
-    background: red;
-    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.55);    
     animation-name: rise;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
