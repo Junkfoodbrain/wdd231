@@ -93,18 +93,21 @@ main {
     position: relative;
     height: 120px;
     overflow: hidden;
+    border: 2px solid yellow;
 }
 .bubble {
     position: absolute;
+    display: block;
     bottom: -20px;
     border-radius: 50%;
-    background: rgba(255,255,255,.55);
+    background: red;
+    z-index: 2;
     animation-name: rise;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
 @keyframes rise {
-    from {transform: translateY(0); opacity: .9;}
+    from {transform: translateY(0); opacity:.9;}
     to {transform: translateY(-140px); opacity:0;}
 }
 
