@@ -93,6 +93,16 @@ main {
     color: #ffffff;
 }
 
+.hero-text {
+    min-height: 0;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #0A3E73, #0A4A8A);
+}
+
+
+
 /* option cards */
 .home-options {
     display: flex;
