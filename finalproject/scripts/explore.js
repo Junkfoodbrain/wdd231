@@ -32,6 +32,7 @@ async function loadFishData() {
 
         fishData = await response.json();
         renderFishCards();
+        
     } catch (error) {
         fishGrid.innerHTML = "<p>Sorry, fish data is unavailable right now.</p>";
         console.error("Fish fetch error:", error);
