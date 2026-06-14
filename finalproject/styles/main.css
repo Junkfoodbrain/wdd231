@@ -17,7 +17,7 @@
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
-    background-color: #028CC7;
+    background-color: #0A3E73;
     color: #ffffff;
 }
 
@@ -104,7 +104,7 @@ header {
 #primary-nav a:hover,
 #primary-nav a:focus-visible,
 #primary-nav a[aria-current="page"] {
-    background-color: #028CC7;
+    background-color: #0A3E73;
     color: #ffffff;
 }
 
@@ -312,7 +312,7 @@ main {
 }
 
 .dive-form-section button[type="submit"] {
-    background-color: #028CC7;
+    background-color: #0A3E73;
     color: #ffffff;
     padding: 1rem 1.5rem;
     border: none;
@@ -325,7 +325,7 @@ main {
 }
 
 .dive-form-section button[type="submit"]:hover {
-    background-color: #0a4a8a;
+    background-color: #072f5e;
     box-shadow: 0 0 4px rgba(114, 182, 229, 0.5);
 }
 
@@ -369,7 +369,7 @@ footer a:visited {
 footer a:hover,
 footer a:focus-visible {
     color: #CDB190;
-    text-decoration-thickness: 2px;   
+    text-decoration-thickness: 2px;
 }
 
 footer a:focus-visible {
