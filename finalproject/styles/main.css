@@ -17,8 +17,8 @@
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
-    background-color: #0A3E73;
-    color: #ffffff;
+    background-color: #028CC7;
+    color: #000000;
 }
 
 h1,
@@ -143,6 +143,7 @@ main {
     margin-bottom: 0.5rem;
     border-radius: 10px;
     background: linear-gradient(180deg, #0A3E73, #0A4A8A);
+    color: #ffffff;
 }
 
 .hero-text h2 {
@@ -161,6 +162,7 @@ main {
     align-items: center;
     gap: 0.6rem;
     flex-wrap: wrap;
+    color: #ffffff;
 }
 
 #care-filter {
@@ -213,6 +215,7 @@ main {
     background-position: center bottom;
     min-height: 280px;
     overflow: hidden;
+    color: #ffffff;
 }
 
 #bubble-field {
