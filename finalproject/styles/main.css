@@ -50,11 +50,47 @@ header {
 #menu-button {
     border: 2px solid #72B6E5;
     background-color: transparent;
-    color: #ffffff;
-    padding: 0.4rem 0.7rem;
+    color: transparent;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     border-radius: 6px;
     font-weight: 700;
+    font-size: 0;
+    line-height: 0;
     cursor: pointer;
+    position: relative;
+}
+
+#menu-button::before,
+#menu-button::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: transform 0.25s ease, top 0.25s ease, box-shadow 0.25s ease;
+}
+
+#menu-button::before {
+    top: 14px;
+    box-shadow: 0 7px 0 #ffffff;
+}
+
+#menu-button::after {
+    top: 28px;
+}
+
+#menu-button.open::before {
+    top: 21px;
+    transform: rotate(45deg);
+    box-shadow: none;
+}
+
+#menu-button.open::after {
+    top: 21px;
+    transform: rotate(-45deg);
 }
 
 #primary-nav a,

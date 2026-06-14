@@ -16,9 +16,12 @@ const menuButton = document.getElementById("menu-button");
 const primaryNav = document.getElementById("primary-nav");
 
 if (menuButton && primaryNav) {
+    menuButton.setAttribute("aria-label", "Open navigation");
+
     menuButton.addEventListener("click", () => {
         const isOpen = primaryNav.classList.toggle("open");
+        menuButton.classList.toggle("open", isOpen);
         menuButton.setAttribute("aria-expanded", String(isOpen));
-        menuButton.textContent = isOpen ? "Close" : "Menu";
+        menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
     });
 }
