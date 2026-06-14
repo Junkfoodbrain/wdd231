@@ -38,7 +38,7 @@ header {
     justify-content: space-between;
 }
 
-.brand h1 {
+.brand .site-title {
     margin: 0;
 }
 
