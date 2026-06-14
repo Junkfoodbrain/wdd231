@@ -1,4 +1,6 @@
 
+import { fetchFishData } from "./fish-data.js";
+
 // ----building fish cards---
 
 const fishGrid = document.getElementById("fish-grid");
@@ -24,15 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadFishData() {
     try {
-        const response = await fetch("data/pacific-fish.json");
-
-        if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);
-        }
-
-        fishData = await response.json();
+        fishData = await fetchFishData();
         renderFishCards();
-        
+
     } catch (error) {
         fishGrid.innerHTML = "<p>Sorry, fish data is unavailable right now.</p>";
         console.error("Fish fetch error:", error);
