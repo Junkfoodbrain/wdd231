@@ -165,6 +165,11 @@ main h2 {
     margin: 0.2rem 0 0;
 }
 
+.dive-hero p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+}
+
 .filter-section {
     background-color: #0A3E73;
     border-radius: 10px;
@@ -180,6 +185,13 @@ main h2 {
     min-height: 44px;
     padding: 0.45rem 0.8rem;
     border-radius: 8px;
+}
+
+.dive-hero button {
+    border-radius: 6px;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    font-size: larger;    
 }
 
 
@@ -235,6 +247,8 @@ main h2 {
     overflow: hidden;
 
 }
+
+
 
 .bubble {
     position: absolute;
