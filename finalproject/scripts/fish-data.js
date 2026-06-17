@@ -1,3 +1,4 @@
+
 export async function fetchFishData() {
     const response = await fetch("data/pacific-fish.json");
 
