@@ -1,0 +1,53 @@
+GEI Web Developer Intern Summary for Class
+
+Job 1: Web Developer Intern
+Company: GEI Consultants
+Location: Rancho Cordova, CA (Sacramento area)
+Level: Internship / Entry-Level
+Type: In-Person / Internship
+Source / URL: https://jointeamgei.geiconsultants.com/jobs/17706557-web-developer-intern?__jvst=Job+Board&__jvsd=LinkedIn
+
+Qualifications:
+- Practical experience in HTML, JavaScript, CSS, and AJAX for web development
+- Proficient in at least some of: Java, JSP, ASP.NET, XML, or JSON
+- Knowledge of databases such as Oracle, Access, or SQL Server
+- Ability to deliver high-quality work on time
+- Self-motivated, detail-oriented, and organized
+- Major in a computer-related field (computer science or engineering)
+- Able to work in person at the Sacramento office location
+
+Requirements:
+- Develop and design database-driven web applications, GIS-based web applications, and GIS mapping applications
+- Create web applications and components from requirements analysis through design, coding, testing, and production
+- Test and deliver websites, applications, and components for clients
+- Learn quickly and adapt to technical and creative environments while meeting tight deadlines
+- Support high-quality deliverables and collaborate with project teams
+
+Compensation:
+- Pay Range: $23.00 – $27.00 per hour
+
+---
+
+Job 2: Web Application Developer / IT Applications Analyst Level I/II
+Company: V Group Inc.
+Location: Sacramento, CA 95814
+Level: Contract (6 months with possible extensions)
+Type: On-site / Contract
+Source / URL: https://www.linkedin.com/jobs/view/4422463808/
+
+Qualifications:
+- Experience with AEM, Angular, JavaScript, CSS, and Java
+- Ability to design, develop, and maintain web-based applications using Angular and Bootstrap
+- Familiarity with responsive UI/UX components and performance optimization
+- Knowledge of Git workflows, branch management, pull requests, and code reviews
+- Experience with CI/CD pipelines, application deployment, and troubleshooting build issues
+- Understanding of search technologies like Apache SOLR and content storage with Adobe Jackrabbit Oak
+- AWS experience is a plus
+
+Requirements:
+- Build, debug, and deploy custom components in the AEM environment
+- Implement analytics-driven features, customize SOLR-based search, and support AI-based search/digital assistant features
+- Collaborate with cross-functional teams to analyze requirements and deliver scalable solutions
+- Manage source code, resolve merge conflicts, and support deployments to Test and QA environments
+- Ensure the performance and quality of web applications across devices
+
